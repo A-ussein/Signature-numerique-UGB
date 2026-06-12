@@ -1,0 +1,6 @@
+sn\ugb\model\OperationResult.class
+sn\ugb\service\SignatureService.class
+sn\ugb\SignatureApp.class
+sn\ugb\service\VerificationService.class
+sn\ugb\controller\SignatureController.class
+sn\ugb\Main.class

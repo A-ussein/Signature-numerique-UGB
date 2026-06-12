@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signature Numérique — UGB Saint-Louis</title>
+    <!-- CSS séparé — modifier ugb.css pour changer le style -->
+    <link rel="stylesheet" th:href="@{/css/ugb.css}"
+          href="../static/css/ugb.css">
+</head>
+<body>
+ 
+<!-- ════════════════════════════════════════════════════════
+     HEADER
+════════════════════════════════════════════════════════ -->
+<header>
+    <div class="header-top">
+ 
+        <!-- Logo UGB réel — place ton image dans static/images/logo_ugb.png -->
+        <img src="../static/images/logo_ugb.png"
+             th:src="@{/images/logo_ugb.jpeg}"
+             alt="Logo UGB"
+             class="logo-ugb"
+             onerror="this.style.display='none';
+                      document.getElementById('logo-fallback')
+                              .style.display='flex'">
+        <div class="logo-ugb-fallback"
+             id="logo-fallback"
+             style="display:none">UGB</div>
+ 
+        <div class="header-text">
+            <h1>Système de Signature Numérique</h1>
+            <p>Université Gaston Berger de Saint-Louis
+               - Master 2 Mathématiques CCA 2024-2025</p>
+        </div>
+ 
+        <div class="header-badge">PAdES · eIDAS Art.26</div>
+    </div>
+ 
+    <!-- Navigation pleine largeur -->
+    <nav>
+        <a onclick="showSection('dashboard')"
+           class="active" id="nav-dashboard">
+            🏠 Tableau de bord
+        </a>
+        <a onclick="showSection('signer')"
+           id="nav-signer">
+            ✍️ Signer
+        </a>
+        <a onclick="showSection('verifier')"
+           id="nav-verifier">
+            🔍 Vérifier
+        </a>
+        <a onclick="showSection('falsifier')"
+           id="nav-falsifier">
+            🔬 Démonstration
+        </a>
+        <a onclick="showSection('benchmark')"
+           id="nav-benchmark">
+            📊 Benchmark
+        </a>
+        <a onclick="showSection('about')"
+           id="nav-about">
+            ℹ️ À propos
+        </a>
+    </nav>
+</header>
+ 
+<!-- ════════════════════════════════════════════════════════
+     CONTENU PRINCIPAL
+════════════════════════════════════════════════════════ -->
+<main>
+ 
+    <!-- ══ TABLEAU DE BORD ═══════════════════════════════ -->
+    <div class="section active" id="section-dashboard">
+ 
+        <!-- Compteurs statistiques -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">✍️</div>
+                <div class="stat-num"
+                     id="nb-signatures">0</div>
+                <div class="stat-label">
+                    Documents signés
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🔍</div>
+                <div class="stat-num"
+                     id="nb-verifications">0</div>
+                <div class="stat-label">
+                    Vérifications effectuées
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">✅</div>
+                <div class="stat-num"
+                     id="nb-valides">0</div>
+                <div class="stat-label">
+                    Signatures valides
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">❌</div>
+                <div class="stat-num"
+                     id="nb-invalides">0</div>
+                <div class="stat-label">
+                    Signatures invalides
+                </div>
+            </div>
+        </div>
+ 
+        <!-- Présentation -->
+        <div class="card">
+            <div class="card-title">
+                🎓 Mémoire Master 2 - UGB Saint-Louis
+            </div>
+            <div class="card-desc">
+                Ce système implémente la signature numérique
+                de documents PDF conformément au règlement
+                européen <strong>eIDAS n°910/2014,
+                Article 26</strong> (Signature Électronique
+                Avancée). Il repose sur la cryptographie
+                asymétrique <strong>RSA + SHA-256</strong>,
+                une infrastructure à clé publique
+                <strong>PKI X.509</strong>, et le format
+                <strong>PAdES (PDF Advanced Electronic
+                Signatures)</strong> conforme ETSI EN 319 122.
+            </div>
+            <div style="display:flex;gap:14px;flex-wrap:wrap">
+                <button class="btn btn-primary"
+                        onclick="showSection('signer')">
+                    ✍️ Signer un document
+                </button>
+                <button class="btn btn-secondary"
+                        onclick="showSection('verifier')">
+                    🔍 Vérifier une signature
+                </button>
+                <button class="btn btn-secondary"
+                        onclick="showSection('falsifier')">
+                    🔬 Démonstration falsification
+                </button>
+            </div>
+        </div>
+ 
+        <!-- Propriétés garanties -->
+        <div class="card">
+            <div class="card-title">
+                🔐 Propriétés cryptographiques garanties
+            </div>
+            <div style="display:grid;
+                        grid-template-columns:repeat(3,1fr);
+                        gap:16px;margin-top:10px">
+                <div class="prop-card">
+                    <div class="prop-icon">🪪</div>
+                    <div class="prop-title">Authenticité</div>
+                    <div class="prop-desc">
+                        Le signataire est identifié de façon
+                        unique par son certificat X.509 émis
+                        par une Autorité de Certification.
+                    </div>
+                </div>
+                <div class="prop-card">
+                    <div class="prop-icon">🔒</div>
+                    <div class="prop-title">Intégrité</div>
+                    <div class="prop-desc">
+                        Toute modification du document après
+                        signature est détectée par la fonction
+                        de hachage SHA-256 .
+                    </div>
+                </div>
+                <div class="prop-card">
+                    <div class="prop-icon">⚖️</div>
+                    <div class="prop-title">Non-répudiation</div>
+                    <div class="prop-desc">
+                        Le signataire ne peut nier avoir signé, seule sa clé privée peut produire
+                        une signature valide.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+    <!-- ══ SIGNER ════════════════════════════════════════ -->
+    <div class="section" id="section-signer">
+        <div class="card">
+            <div class="card-title">
+                ✍️ Signer un document PDF
+            </div>
+            <div class="card-desc">
+                Déposez votre document PDF. Il sera signé
+                en format <strong>PAdES-B</strong> avec le
+                certificat X.509 d'Abdou Fatim DIOP, en utilisant
+                RSA-2048 et SHA-256, conformément à l'Article
+                26 du règlement eIDAS n°910/2014.
+            </div>
+ 
+            <div class="upload-zone" id="zone-signer"
+                 onclick="document.getElementById(
+                              'file-signer').click()"
+                 ondragover="dragOver(event,'zone-signer')"
+                 ondragleave="dragLeave('zone-signer')"
+                 ondrop="drop(event,'file-signer',
+                              'info-signer')">
+                <div class="upload-icon">📄</div>
+                <h3>Cliquez ou glissez votre PDF ici</h3>
+                <p>Format accepté : PDF · Taille max : 50 Mo</p>
+            </div>
+            <input type="file" id="file-signer"
+                   accept=".pdf"
+                   onchange="showFileInfo(
+                       'file-signer','info-signer')">
+ 
+            <div class="file-info" id="info-signer">
+                <span>📄</span>
+                <span id="info-signer-name"></span>
+                <span id="info-signer-size"
+                      style="margin-left:auto;
+                             color:var(--ugb-gris)">
+                </span>
+            </div>
+ 
+            <button class="btn btn-primary"
+                    id="btn-signer" disabled
+                    onclick="signerDocument()">
+                ✍️ Signer le document
+            </button>
+            <!-- Bouton télécharger — caché par défaut -->
+<div id="zone-telecharger"
+     style="display:none; margin-top:16px;">
+    <a id="lien-telecharger"
+       href="#"
+       class="btn btn-primary"
+       style="text-decoration:none;">
+        ⬇️ Télécharger le PDF signé
+    </a>
+</div>
+            <div class="loader" id="loader-signer">
+                <div class="spinner"></div>
+                Signature en cours…
+                Calcul RSA + SHA-256 en cours
+            </div>
+ 
+            <div class="result-box" id="result-signer">
+                <div class="result-title"
+                     id="result-signer-title"></div>
+                <div class="result-detail"
+                     id="result-signer-detail"></div>
+                <div class="result-time"
+                     id="result-signer-time"></div>
+            </div>
+        </div>
+    </div>
+ 
+    <!-- ══ VÉRIFIER ══════════════════════════════════════ -->
+    <div class="section" id="section-verifier">
+        <div class="card">
+            <div class="card-title">
+                🔍 Vérifier une signature PAdES
+            </div>
+            <div class="card-desc">
+                Déposez un document PDF signé. Le système
+                vérifie la valeur cryptographique, la chaîne
+                de confiance X.509 et le statut du certificat
+                signataire.
+            </div>
+ 
+            <div class="upload-zone" id="zone-verifier"
+                 onclick="document.getElementById(
+                              'file-verifier').click()"
+                 ondragover="dragOver(event,'zone-verifier')"
+                 ondragleave="dragLeave('zone-verifier')"
+                 ondrop="drop(event,'file-verifier',
+                              'info-verifier')">
+                <div class="upload-icon">🔍</div>
+                <h3>Cliquez ou glissez votre PDF signé</h3>
+                <p>Format accepté : PDF signé PAdES</p>
+            </div>
+            <input type="file" id="file-verifier"
+                   accept=".pdf"
+                   onchange="showFileInfo(
+                       'file-verifier','info-verifier')">
+ 
+            <div class="file-info" id="info-verifier">
+                <span>📄</span>
+                <span id="info-verifier-name"></span>
+                <span id="info-verifier-size"
+                      style="margin-left:auto">
+                </span>
+            </div>
+ 
+            <button class="btn btn-primary"
+                    id="btn-verifier" disabled
+                    onclick="verifierDocument()">
+                🔍 Vérifier la signature
+            </button>
+ 
+            <div class="loader" id="loader-verifier">
+                <div class="spinner"></div>
+                Vérification en cours…
+                Validation de la chaîne X.509
+            </div>
+ 
+            <div class="result-box" id="result-verifier">
+                <div class="result-title"
+                     id="result-verifier-title"></div>
+                <div class="result-detail"
+                     id="result-verifier-detail"></div>
+                <div class="result-time"
+                     id="result-verifier-time"></div>
+            </div>
+        </div>
+    </div>
+ 
+    <!-- ══ DÉMONSTRATION FALSIFICATION ═══════════════════ -->
+    <div class="section" id="section-falsifier">
+        <div class="card">
+            <div class="card-title">
+                🔬 Démonstration : Détection de falsification
+            </div>
+            <div class="card-desc">
+                Cette démonstration prouve expérimentalement
+                la propriété d'<strong>intégrité</strong>.
+                Un document est signé, puis un seul octet est
+                modifié. Le système détecte immédiatement la
+                falsification grâce à SHA-256
+                <strong>(effet avalanche)</strong>.
+            </div>
+ 
+            <div class="upload-zone" id="zone-falsifier"
+                 onclick="document.getElementById(
+                              'file-falsifier').click()"
+                 ondragover="dragOver(event,'zone-falsifier')"
+                 ondragleave="dragLeave('zone-falsifier')"
+                 ondrop="drop(event,'file-falsifier',
+                              'info-falsifier')">
+                <div class="upload-icon">🔬</div>
+                <h3>Déposez un PDF pour la démonstration</h3>
+                <p>Le document sera signé puis falsifié
+                   automatiquement pour la démonstration</p>
+            </div>
+            <input type="file" id="file-falsifier"
+                   accept=".pdf"
+                   onchange="showFileInfo(
+                       'file-falsifier','info-falsifier')">
+ 
+            <div class="file-info" id="info-falsifier">
+                <span>📄</span>
+                <span id="info-falsifier-name"></span>
+                <span id="info-falsifier-size"
+                      style="margin-left:auto">
+                </span>
+            </div>
+ 
+            <button class="btn btn-primary"
+                    id="btn-falsifier" disabled
+                    onclick="testerFalsification()">
+                🔬 Lancer la démonstration
+            </button>
+ 
+            <div class="loader" id="loader-falsifier">
+                <div class="spinner"></div>
+                Démonstration en cours…
+            </div>
+ 
+            <div class="result-box" id="result-falsifier">
+                <div class="result-title"
+                     id="result-falsifier-title"></div>
+                <div class="demo-steps"
+                     id="demo-steps"
+                     style="display:none">
+                    <div class="demo-step">
+                        <h4>Étape 1 - Document original signé</h4>
+                        <p>Signature RSA + SHA-256 appliquée
+                           sur le document original</p>
+                        <div class="demo-result"
+                             id="demo-avant"></div>
+                    </div>
+                    <div class="demo-step">
+                        <h4>Étape 2 - Document falsifié</h4>
+                        <p>1 seul octet modifié
+                           (position 1000 du fichier)</p>
+                        <div class="demo-result"
+                             id="demo-apres"></div>
+                    </div>
+                </div>
+                <div class="result-detail"
+                     id="result-falsifier-detail"
+                     style="margin-top:14px"></div>
+            </div>
+        </div>
+    </div>
+ 
+    <!-- ══ BENCHMARK ═════════════════════════════════════ -->
+    <div class="section" id="section-benchmark">
+        <div class="card">
+            <div class="card-title">
+                📊 Benchmark des performances
+            </div>
+            <div class="card-desc">
+                Mesure les performances du système sur
+                5 répétitions. 
+            </div>
+ 
+            <button class="btn btn-primary"
+                    onclick="lancerBenchmark()">
+                📊 Lancer le benchmark
+            </button>
+ 
+            <div class="loader" id="loader-benchmark">
+                <div class="spinner"></div>
+                Benchmark en cours (5 répétitions)…
+                Veuillez patienter
+            </div>
+ 
+            <div id="result-benchmark"
+                 style="display:none;margin-top:24px">
+                <table class="bench-table">
+                    <thead>
+                        <tr>
+                            <th>Métrique mesurée</th>
+                            <th>Valeur obtenue</th>
+                            <th>Cible NF01</th>
+                            <th>Conformité</th>
+                        </tr>
+                    </thead>
+                    <tbody id="bench-tbody"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+ 
+    <!-- ══ À PROPOS ═══════════════════════════════════════ -->
+    <div class="section" id="section-about">
+        <div class="card">
+            <div class="card-title">
+                ℹ️ À propos du système
+            </div>
+            <table class="bench-table"
+                   style="margin-top:0">
+                <tr>
+                    <th colspan="2">
+                        Informations du projet
+                    </th>
+                </tr>
+                <tr>
+                    <td>Auteur</td>
+                    <td>
+                        <strong>Abdou Fatim Diop</strong>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Institution</td>
+                    <td>Université Gaston Berger
+                        de Saint-Louis, Sénégal</td>
+                </tr>
+                <tr>
+                    <td>Diplôme</td>
+                    <td>Master 2 Mathématiques - CCA</td>
+                </tr>
+                <tr>
+                    <td>Année universitaire</td>
+                    <td>2024-2025</td>
+                </tr>
+                <tr>
+                    <th colspan="2">Stack technique</th>
+                </tr>
+                <tr>
+                    <td>Langage</td>
+                    <td>Java 17 LTS (OpenJDK Temurin)</td>
+                </tr>
+                <tr>
+                    <td>Framework</td>
+                    <td>Spring Boot 3.2.3</td>
+                </tr>
+                <tr>
+                    <td>Bibliothèque signature</td>
+                    <td>DSS 5.12 → Commission Européenne</td>
+                </tr>
+                <tr>
+                    <td>PKI</td>
+                    <td>OpenSSL 3.x → Hiérarchie 3 niveaux
+                        (Root CA → CA Inter → Alice)</td>
+                </tr>
+                <tr>
+                    <td>Format signature</td>
+                    <td>PAdES-B (ETSI EN 319 122)</td>
+                </tr>
+                <tr>
+                    <td>Algorithme</td>
+                    <td>RSA-2048 + SHA-256
+                        (NIST FIPS 186-5)</td>
+                </tr>
+                <tr>
+                    <th colspan="2">
+                        Conformité eIDAS Art. 26
+                    </th>
+                </tr>
+                <tr>
+                    <td>Art. 26 (i) - Lien univoque</td>
+                    <td class="ok">
+                        ✅ Satisfait - certificat X.509
+                        individuel par signataire
+                    </td>
+                </tr>
+                <tr>
+                    <td>Art. 26 (ii) - Identification</td>
+                    <td class="ok">
+                        ✅ Satisfait - CN + Organisation
+                        dans le certificat
+                    </td>
+                </tr>
+                <tr>
+                    <td>Art. 26 (iii) - Contrôle exclusif</td>
+                    <td class="ok">
+                        ✅ Satisfait - clé privée PKCS#12
+                        protégée par mot de passe
+                    </td>
+                </tr>
+                <tr>
+                    <td>Art. 26 (iv) - Détection modif.</td>
+                    <td class="ok">
+                        ✅ Satisfait - SHA-256 + ByteRange
+                        PAdES (tests T01 et T02)
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+ 
+</main>
+ 
+<!-- ════════════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════════════ -->
+<footer>
+    <p>🎓 Mémoire Master 2 Mathématiques CCA
+       - Université Gaston Berger de Saint-Louis</p>
+    <p>Implémentation d'un système de signature numérique
+       pour la protection des documents numériques</p>
+    <p>Java 17 · Spring Boot 3.2 · DSS 5.12 ·
+       PAdES · eIDAS n°910/2014 | 2024-2025</p>
+</footer>
+ 
+<!-- JavaScript séparé -->
+<script th:src="@{/js/app.js}"
+        src="../static/js/app.js"></script>
+ 
+</body>
+</html>

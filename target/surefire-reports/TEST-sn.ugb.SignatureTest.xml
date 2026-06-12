@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="sn.ugb.SignatureTest" time="6.575" tests="6" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\User\Desktop\PRATIQUE\signature-numerique\target\test-classes;C:\Users\User\Desktop\PRATIQUE\signature-numerique\target\classes;C:\Users\User\.m2\repository\eu\europa\ec\joinup\sd-dss\dss-model\5.12\dss-model-5.12.jar;C:\Users\User\.m2\repository\eu\europa\ec\joinup\sd-dss\dss-enumerations\5.12\dss-enumerations-5.12.jar;C:\Users\User\.m2\repository\eu\europa\ec\joinup\sd-dss\dss-utils\5.12\dss-utils-5.12.jar;C:\Users\User\.m2\repository\eu\europa\ec\joinup\sd-dss\dss-utils-google-guava\5.12\dss-utils-google-guava-5.12.jar;C:\Users\User\.m2\repository\com\google\guava\guava\31.1-jre\guava-31.1-jre.jar;C:\Users\User\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar;C:\Users\User\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\User\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\User\.m2\repository\org\checkerframework\checker-qual\3.12.0\checker-qual-3.12.0.jar;C:\Users\User\.m2\repository\com\google\errorprone\error_prone_annotations\2.11.0\error_prone_annotations-2.11.0.jar;C:\Users\User\.m2\repository\com\google\j2objc\j2objc-annotations\1.3\j2objc-annotations-1.3.jar;C:\Users\User\.m2\repository\eu\europa\ec\joinup\sd-dss\dss-pades\5.12\dss-pades-5.12.jar;C:\Users\User\.m2\repository\eu\europa\ec\joinup\sd-dss\dss-pades-openpdf\5.12\dss-pades-openpdf-5.12.jar;C:\Users\User\.m2\repository\com\github\librepdf\openpdf\1.3.30\openpdf-1.3.30.jar;C:\Users\User\.m2\repository\eu\europa\ec\joinup\sd-dss\dss-cades\5.12\dss-cades-5.12.jar;C:\Users\User\.m2\repository\eu\europa\ec\joinup\sd-dss\dss-document\5.12\dss-document-5.12.jar;C:\Users\User\.m2\repository\eu\europa\ec\joinup\sd-dss\dss-spi\5.12\dss-spi-5.12.jar;C:\Users\User\.m2\repository\eu\europa\ec\joinup\sd-dss\dss-crl-parser\5.12\dss-crl-parser-5.12.jar;C:\Users\User\.m2\repository\org\bouncycastle\bcprov-jdk18on\1.72\bcprov-jdk18on-1.72.jar;C:\Users\User\.m2\repository\org\bouncycastle\bcpkix-jdk18on\1.72\bcpkix-jdk18on-1.72.jar;C:\Users\User\.m2\repository\org\bouncycastle\bcutil-jdk18on\1.72\bcutil-jdk18on-1.72.jar;C:\Users\User\.m2\repository\eu\europa\ec\joinup\sd-dss\validation-policy\5.12\validation-policy-5.12.jar;C:\Users\User\.m2\repository\eu\europa\ec\joinup\sd-dss\dss-policy-jaxb\5.12\dss-policy-jaxb-5.12.jar;C:\Users\User\.m2\repository\eu\europa\ec\joinup\sd-dss\dss-diagnostic-jaxb\5.12\dss-diagnostic-jaxb-5.12.jar;C:\Users\User\.m2\repository\eu\europa\ec\joinup\sd-dss\dss-simple-certificate-report-jaxb\5.12\dss-simple-certificate-report-jaxb-5.12.jar;C:\Users\User\.m2\repository\eu\europa\ec\joinup\sd-dss\dss-detailed-report-jaxb\5.12\dss-detailed-report-jaxb-5.12.jar;C:\Users\User\.m2\repository\eu\europa\ec\joinup\sd-dss\specs-validation-report\5.12\specs-validation-report-5.12.jar;C:\Users\User\.m2\repository\eu\europa\ec\joinup\sd-dss\specs-xmldsig\5.12\specs-xmldsig-5.12.jar;C:\Users\User\.m2\repository\eu\europa\ec\joinup\sd-dss\specs-xades\5.12\specs-xades-5.12.jar;C:\Users\User\.m2\repository\eu\europa\ec\joinup\sd-dss\specs-trusted-list\5.12\specs-trusted-list-5.12.jar;C:\Users\User\.m2\repository\eu\europa\ec\joinup\sd-dss\dss-i18n\5.12\dss-i18n-5.12.jar;C:\Users\User\.m2\repository\eu\europa\ec\joinup\sd-dss\dss-token\5.12\dss-token-5.12.jar;C:\Users\User\.m2\repository\eu\europa\ec\joinup\sd-dss\dss-service\5.12\dss-service-5.12.jar;C:\Users\User\.m2\repository\org\apache\httpcomponents\client5\httpclient5\5.2.1\httpclient5-5.2.1.jar;C:\Users\User\.m2\repository\org\apache\httpcomponents\core5\httpcore5\5.2\httpcore5-5.2.jar;C:\Users\User\.m2\repository\org\apache\httpcomponents\core5\httpcore5-h2\5.2\httpcore5-h2-5.2.jar;C:\Users\User\.m2\repository\eu\europa\ec\joinup\sd-dss\dss-certificate-validation-common\5.12\dss-certificate-validation-common-5.12.jar;C:\Users\User\.m2\repository\eu\europa\ec\joinup\sd-dss\dss-certificate-validation-dto\5.12\dss-certificate-validation-dto-5.12.jar;C:\Users\User\.m2\repository\eu\europa\ec\joinup\sd-dss\dss-common-remote-dto\5.12\dss-common-remote-dto-5.12.jar;C:\Users\User\.m2\repository\eu\europa\ec\joinup\sd-dss\dss-common-remote-converter\5.12\dss-common-remote-converter-5.12.jar;C:\Users\User\.m2\repository\eu\europa\ec\joinup\sd-dss\dss-simple-report-jaxb\5.12\dss-simple-report-jaxb-5.12.jar;C:\Users\User\.m2\repository\eu\europa\ec\joinup\sd-dss\dss-jaxb-parsers\5.12\dss-jaxb-parsers-5.12.jar;C:\Users\User\.m2\repository\eu\europa\ec\joinup\sd-dss\dss-jaxb-common\5.12\dss-jaxb-common-5.12.jar;C:\Users\User\.m2\repository\eu\europa\ec\joinup\sd-dss\dss-alert\5.12\dss-alert-5.12.jar;C:\Users\User\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\2.3.3\jakarta.xml.bind-api-2.3.3.jar;C:\Users\User\.m2\repository\jakarta\activation\jakarta.activation-api\1.2.2\jakarta.activation-api-1.2.2.jar;C:\Users\User\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.8\jaxb-runtime-2.3.8.jar;C:\Users\User\.m2\repository\org\glassfish\jaxb\txw2\2.3.8\txw2-2.3.8.jar;C:\Users\User\.m2\repository\com\sun\istack\istack-commons-runtime\3.0.12\istack-commons-runtime-3.0.12.jar;C:\Users\User\.m2\repository\com\sun\activation\jakarta.activation\1.2.2\jakarta.activation-1.2.2.jar;C:\Users\User\.m2\repository\org\bouncycastle\bcprov-jdk15on\1.70\bcprov-jdk15on-1.70.jar;C:\Users\User\.m2\repository\org\bouncycastle\bcpkix-jdk15on\1.70\bcpkix-jdk15on-1.70.jar;C:\Users\User\.m2\repository\org\bouncycastle\bcutil-jdk15on\1.70\bcutil-jdk15on-1.70.jar;C:\Users\User\.m2\repository\org\slf4j\slf4j-api\2.0.9\slf4j-api-2.0.9.jar;C:\Users\User\.m2\repository\ch\qos\logback\logback-classic\1.4.14\logback-classic-1.4.14.jar;C:\Users\User\.m2\repository\ch\qos\logback\logback-core\1.4.14\logback-core-1.4.14.jar;C:\Users\User\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.1\junit-jupiter-5.10.1.jar;C:\Users\User\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.1\junit-jupiter-api-5.10.1.jar;C:\Users\User\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\User\.m2\repository\org\junit\platform\junit-platform-commons\1.10.1\junit-platform-commons-1.10.1.jar;C:\Users\User\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\User\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.1\junit-jupiter-params-5.10.1.jar;C:\Users\User\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.1\junit-jupiter-engine-5.10.1.jar;C:\Users\User\.m2\repository\org\junit\platform\junit-platform-engine\1.10.1\junit-platform-engine-1.10.1.jar;C:\Users\User\.m2\repository\org\springframework\boot\spring-boot-starter-web\3.2.3\spring-boot-starter-web-3.2.3.jar;C:\Users\User\.m2\repository\org\springframework\boot\spring-boot-starter\3.2.3\spring-boot-starter-3.2.3.jar;C:\Users\User\.m2\repository\org\springframework\boot\spring-boot\3.2.3\spring-boot-3.2.3.jar;C:\Users\User\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\3.2.3\spring-boot-autoconfigure-3.2.3.jar;C:\Users\User\.m2\repository\org\springframework\boot\spring-boot-starter-logging\3.2.3\spring-boot-starter-logging-3.2.3.jar;C:\Users\User\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.21.1\log4j-to-slf4j-2.21.1.jar;C:\Users\User\.m2\repository\org\apache\logging\log4j\log4j-api\2.21.1\log4j-api-2.21.1.jar;C:\Users\User\.m2\repository\org\slf4j\jul-to-slf4j\2.0.12\jul-to-slf4j-2.0.12.jar;C:\Users\User\.m2\repository\jakarta\annotation\jakarta.annotation-api\2.1.1\jakarta.annotation-api-2.1.1.jar;C:\Users\User\.m2\repository\org\springframework\spring-core\6.1.4\spring-core-6.1.4.jar;C:\Users\User\.m2\repository\org\springframework\spring-jcl\6.1.4\spring-jcl-6.1.4.jar;C:\Users\User\.m2\repository\org\yaml\snakeyaml\2.2\snakeyaml-2.2.jar;C:\Users\User\.m2\repository\org\springframework\boot\spring-boot-starter-json\3.2.3\spring-boot-starter-json-3.2.3.jar;C:\Users\User\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.15.4\jackson-databind-2.15.4.jar;C:\Users\User\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.15.4\jackson-annotations-2.15.4.jar;C:\Users\User\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.15.4\jackson-core-2.15.4.jar;C:\Users\User\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.15.4\jackson-datatype-jdk8-2.15.4.jar;C:\Users\User\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.15.4\jackson-datatype-jsr310-2.15.4.jar;C:\Users\User\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.15.4\jackson-module-parameter-names-2.15.4.jar;C:\Users\User\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\3.2.3\spring-boot-starter-tomcat-3.2.3.jar;C:\Users\User\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\10.1.19\tomcat-embed-core-10.1.19.jar;C:\Users\User\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\10.1.19\tomcat-embed-el-10.1.19.jar;C:\Users\User\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\10.1.19\tomcat-embed-websocket-10.1.19.jar;C:\Users\User\.m2\repository\org\springframework\spring-web\6.1.4\spring-web-6.1.4.jar;C:\Users\User\.m2\repository\org\springframework\spring-beans\6.1.4\spring-beans-6.1.4.jar;C:\Users\User\.m2\repository\io\micrometer\micrometer-observation\1.12.3\micrometer-observation-1.12.3.jar;C:\Users\User\.m2\repository\io\micrometer\micrometer-commons\1.12.3\micrometer-commons-1.12.3.jar;C:\Users\User\.m2\repository\org\springframework\spring-webmvc\6.1.4\spring-webmvc-6.1.4.jar;C:\Users\User\.m2\repository\org\springframework\spring-aop\6.1.4\spring-aop-6.1.4.jar;C:\Users\User\.m2\repository\org\springframework\spring-context\6.1.4\spring-context-6.1.4.jar;C:\Users\User\.m2\repository\org\springframework\spring-expression\6.1.4\spring-expression-6.1.4.jar;C:\Users\User\.m2\repository\org\springframework\boot\spring-boot-starter-thymeleaf\3.2.3\spring-boot-starter-thymeleaf-3.2.3.jar;C:\Users\User\.m2\repository\org\thymeleaf\thymeleaf-spring6\3.1.2.RELEASE\thymeleaf-spring6-3.1.2.RELEASE.jar;C:\Users\User\.m2\repository\org\thymeleaf\thymeleaf\3.1.2.RELEASE\thymeleaf-3.1.2.RELEASE.jar;C:\Users\User\.m2\repository\org\attoparser\attoparser\2.0.7.RELEASE\attoparser-2.0.7.RELEASE.jar;C:\Users\User\.m2\repository\org\unbescape\unbescape\1.1.6.RELEASE\unbescape-1.1.6.RELEASE.jar;"/>
+    <property name="java.vm.vendor" value="Eclipse Adoptium"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://adoptium.net/"/>
+    <property name="user.timezone" value="Europe/London"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="SN"/>
+    <property name="sun.boot.library.path" value="C:\Users\User\AppData\Local\Programs\Eclipse Adoptium\jdk-17.0.18.8-hotspot\bin"/>
+    <property name="sun.java.command" value="C:\Users\User\AppData\Local\Temp\surefire14365047891653999135\surefirebooter-20260612054335869_3.jar C:\Users\User\AppData\Local\Temp\surefire14365047891653999135 2026-06-12T05-43-35_302-jvmRun1 surefire-20260612054335869_1tmp surefire_0-20260612054335869_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\User\Desktop\PRATIQUE\signature-numerique\target\test-classes;C:\Users\User\Desktop\PRATIQUE\signature-numerique\target\classes;C:\Users\User\.m2\repository\eu\europa\ec\joinup\sd-dss\dss-model\5.12\dss-model-5.12.jar;C:\Users\User\.m2\repository\eu\europa\ec\joinup\sd-dss\dss-enumerations\5.12\dss-enumerations-5.12.jar;C:\Users\User\.m2\repository\eu\europa\ec\joinup\sd-dss\dss-utils\5.12\dss-utils-5.12.jar;C:\Users\User\.m2\repository\eu\europa\ec\joinup\sd-dss\dss-utils-google-guava\5.12\dss-utils-google-guava-5.12.jar;C:\Users\User\.m2\repository\com\google\guava\guava\31.1-jre\guava-31.1-jre.jar;C:\Users\User\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar;C:\Users\User\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\User\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\User\.m2\repository\org\checkerframework\checker-qual\3.12.0\checker-qual-3.12.0.jar;C:\Users\User\.m2\repository\com\google\errorprone\error_prone_annotations\2.11.0\error_prone_annotations-2.11.0.jar;C:\Users\User\.m2\repository\com\google\j2objc\j2objc-annotations\1.3\j2objc-annotations-1.3.jar;C:\Users\User\.m2\repository\eu\europa\ec\joinup\sd-dss\dss-pades\5.12\dss-pades-5.12.jar;C:\Users\User\.m2\repository\eu\europa\ec\joinup\sd-dss\dss-pades-openpdf\5.12\dss-pades-openpdf-5.12.jar;C:\Users\User\.m2\repository\com\github\librepdf\openpdf\1.3.30\openpdf-1.3.30.jar;C:\Users\User\.m2\repository\eu\europa\ec\joinup\sd-dss\dss-cades\5.12\dss-cades-5.12.jar;C:\Users\User\.m2\repository\eu\europa\ec\joinup\sd-dss\dss-document\5.12\dss-document-5.12.jar;C:\Users\User\.m2\repository\eu\europa\ec\joinup\sd-dss\dss-spi\5.12\dss-spi-5.12.jar;C:\Users\User\.m2\repository\eu\europa\ec\joinup\sd-dss\dss-crl-parser\5.12\dss-crl-parser-5.12.jar;C:\Users\User\.m2\repository\org\bouncycastle\bcprov-jdk18on\1.72\bcprov-jdk18on-1.72.jar;C:\Users\User\.m2\repository\org\bouncycastle\bcpkix-jdk18on\1.72\bcpkix-jdk18on-1.72.jar;C:\Users\User\.m2\repository\org\bouncycastle\bcutil-jdk18on\1.72\bcutil-jdk18on-1.72.jar;C:\Users\User\.m2\repository\eu\europa\ec\joinup\sd-dss\validation-policy\5.12\validation-policy-5.12.jar;C:\Users\User\.m2\repository\eu\europa\ec\joinup\sd-dss\dss-policy-jaxb\5.12\dss-policy-jaxb-5.12.jar;C:\Users\User\.m2\repository\eu\europa\ec\joinup\sd-dss\dss-diagnostic-jaxb\5.12\dss-diagnostic-jaxb-5.12.jar;C:\Users\User\.m2\repository\eu\europa\ec\joinup\sd-dss\dss-simple-certificate-report-jaxb\5.12\dss-simple-certificate-report-jaxb-5.12.jar;C:\Users\User\.m2\repository\eu\europa\ec\joinup\sd-dss\dss-detailed-report-jaxb\5.12\dss-detailed-report-jaxb-5.12.jar;C:\Users\User\.m2\repository\eu\europa\ec\joinup\sd-dss\specs-validation-report\5.12\specs-validation-report-5.12.jar;C:\Users\User\.m2\repository\eu\europa\ec\joinup\sd-dss\specs-xmldsig\5.12\specs-xmldsig-5.12.jar;C:\Users\User\.m2\repository\eu\europa\ec\joinup\sd-dss\specs-xades\5.12\specs-xades-5.12.jar;C:\Users\User\.m2\repository\eu\europa\ec\joinup\sd-dss\specs-trusted-list\5.12\specs-trusted-list-5.12.jar;C:\Users\User\.m2\repository\eu\europa\ec\joinup\sd-dss\dss-i18n\5.12\dss-i18n-5.12.jar;C:\Users\User\.m2\repository\eu\europa\ec\joinup\sd-dss\dss-token\5.12\dss-token-5.12.jar;C:\Users\User\.m2\repository\eu\europa\ec\joinup\sd-dss\dss-service\5.12\dss-service-5.12.jar;C:\Users\User\.m2\repository\org\apache\httpcomponents\client5\httpclient5\5.2.1\httpclient5-5.2.1.jar;C:\Users\User\.m2\repository\org\apache\httpcomponents\core5\httpcore5\5.2\httpcore5-5.2.jar;C:\Users\User\.m2\repository\org\apache\httpcomponents\core5\httpcore5-h2\5.2\httpcore5-h2-5.2.jar;C:\Users\User\.m2\repository\eu\europa\ec\joinup\sd-dss\dss-certificate-validation-common\5.12\dss-certificate-validation-common-5.12.jar;C:\Users\User\.m2\repository\eu\europa\ec\joinup\sd-dss\dss-certificate-validation-dto\5.12\dss-certificate-validation-dto-5.12.jar;C:\Users\User\.m2\repository\eu\europa\ec\joinup\sd-dss\dss-common-remote-dto\5.12\dss-common-remote-dto-5.12.jar;C:\Users\User\.m2\repository\eu\europa\ec\joinup\sd-dss\dss-common-remote-converter\5.12\dss-common-remote-converter-5.12.jar;C:\Users\User\.m2\repository\eu\europa\ec\joinup\sd-dss\dss-simple-report-jaxb\5.12\dss-simple-report-jaxb-5.12.jar;C:\Users\User\.m2\repository\eu\europa\ec\joinup\sd-dss\dss-jaxb-parsers\5.12\dss-jaxb-parsers-5.12.jar;C:\Users\User\.m2\repository\eu\europa\ec\joinup\sd-dss\dss-jaxb-common\5.12\dss-jaxb-common-5.12.jar;C:\Users\User\.m2\repository\eu\europa\ec\joinup\sd-dss\dss-alert\5.12\dss-alert-5.12.jar;C:\Users\User\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\2.3.3\jakarta.xml.bind-api-2.3.3.jar;C:\Users\User\.m2\repository\jakarta\activation\jakarta.activation-api\1.2.2\jakarta.activation-api-1.2.2.jar;C:\Users\User\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.8\jaxb-runtime-2.3.8.jar;C:\Users\User\.m2\repository\org\glassfish\jaxb\txw2\2.3.8\txw2-2.3.8.jar;C:\Users\User\.m2\repository\com\sun\istack\istack-commons-runtime\3.0.12\istack-commons-runtime-3.0.12.jar;C:\Users\User\.m2\repository\com\sun\activation\jakarta.activation\1.2.2\jakarta.activation-1.2.2.jar;C:\Users\User\.m2\repository\org\bouncycastle\bcprov-jdk15on\1.70\bcprov-jdk15on-1.70.jar;C:\Users\User\.m2\repository\org\bouncycastle\bcpkix-jdk15on\1.70\bcpkix-jdk15on-1.70.jar;C:\Users\User\.m2\repository\org\bouncycastle\bcutil-jdk15on\1.70\bcutil-jdk15on-1.70.jar;C:\Users\User\.m2\repository\org\slf4j\slf4j-api\2.0.9\slf4j-api-2.0.9.jar;C:\Users\User\.m2\repository\ch\qos\logback\logback-classic\1.4.14\logback-classic-1.4.14.jar;C:\Users\User\.m2\repository\ch\qos\logback\logback-core\1.4.14\logback-core-1.4.14.jar;C:\Users\User\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.1\junit-jupiter-5.10.1.jar;C:\Users\User\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.1\junit-jupiter-api-5.10.1.jar;C:\Users\User\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\User\.m2\repository\org\junit\platform\junit-platform-commons\1.10.1\junit-platform-commons-1.10.1.jar;C:\Users\User\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\User\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.1\junit-jupiter-params-5.10.1.jar;C:\Users\User\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.1\junit-jupiter-engine-5.10.1.jar;C:\Users\User\.m2\repository\org\junit\platform\junit-platform-engine\1.10.1\junit-platform-engine-1.10.1.jar;C:\Users\User\.m2\repository\org\springframework\boot\spring-boot-starter-web\3.2.3\spring-boot-starter-web-3.2.3.jar;C:\Users\User\.m2\repository\org\springframework\boot\spring-boot-starter\3.2.3\spring-boot-starter-3.2.3.jar;C:\Users\User\.m2\repository\org\springframework\boot\spring-boot\3.2.3\spring-boot-3.2.3.jar;C:\Users\User\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\3.2.3\spring-boot-autoconfigure-3.2.3.jar;C:\Users\User\.m2\repository\org\springframework\boot\spring-boot-starter-logging\3.2.3\spring-boot-starter-logging-3.2.3.jar;C:\Users\User\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.21.1\log4j-to-slf4j-2.21.1.jar;C:\Users\User\.m2\repository\org\apache\logging\log4j\log4j-api\2.21.1\log4j-api-2.21.1.jar;C:\Users\User\.m2\repository\org\slf4j\jul-to-slf4j\2.0.12\jul-to-slf4j-2.0.12.jar;C:\Users\User\.m2\repository\jakarta\annotation\jakarta.annotation-api\2.1.1\jakarta.annotation-api-2.1.1.jar;C:\Users\User\.m2\repository\org\springframework\spring-core\6.1.4\spring-core-6.1.4.jar;C:\Users\User\.m2\repository\org\springframework\spring-jcl\6.1.4\spring-jcl-6.1.4.jar;C:\Users\User\.m2\repository\org\yaml\snakeyaml\2.2\snakeyaml-2.2.jar;C:\Users\User\.m2\repository\org\springframework\boot\spring-boot-starter-json\3.2.3\spring-boot-starter-json-3.2.3.jar;C:\Users\User\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.15.4\jackson-databind-2.15.4.jar;C:\Users\User\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.15.4\jackson-annotations-2.15.4.jar;C:\Users\User\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.15.4\jackson-core-2.15.4.jar;C:\Users\User\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.15.4\jackson-datatype-jdk8-2.15.4.jar;C:\Users\User\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.15.4\jackson-datatype-jsr310-2.15.4.jar;C:\Users\User\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.15.4\jackson-module-parameter-names-2.15.4.jar;C:\Users\User\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\3.2.3\spring-boot-starter-tomcat-3.2.3.jar;C:\Users\User\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\10.1.19\tomcat-embed-core-10.1.19.jar;C:\Users\User\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\10.1.19\tomcat-embed-el-10.1.19.jar;C:\Users\User\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\10.1.19\tomcat-embed-websocket-10.1.19.jar;C:\Users\User\.m2\repository\org\springframework\spring-web\6.1.4\spring-web-6.1.4.jar;C:\Users\User\.m2\repository\org\springframework\spring-beans\6.1.4\spring-beans-6.1.4.jar;C:\Users\User\.m2\repository\io\micrometer\micrometer-observation\1.12.3\micrometer-observation-1.12.3.jar;C:\Users\User\.m2\repository\io\micrometer\micrometer-commons\1.12.3\micrometer-commons-1.12.3.jar;C:\Users\User\.m2\repository\org\springframework\spring-webmvc\6.1.4\spring-webmvc-6.1.4.jar;C:\Users\User\.m2\repository\org\springframework\spring-aop\6.1.4\spring-aop-6.1.4.jar;C:\Users\User\.m2\repository\org\springframework\spring-context\6.1.4\spring-context-6.1.4.jar;C:\Users\User\.m2\repository\org\springframework\spring-expression\6.1.4\spring-expression-6.1.4.jar;C:\Users\User\.m2\repository\org\springframework\boot\spring-boot-starter-thymeleaf\3.2.3\spring-boot-starter-thymeleaf-3.2.3.jar;C:\Users\User\.m2\repository\org\thymeleaf\thymeleaf-spring6\3.1.2.RELEASE\thymeleaf-spring6-3.1.2.RELEASE.jar;C:\Users\User\.m2\repository\org\thymeleaf\thymeleaf\3.1.2.RELEASE\thymeleaf-3.1.2.RELEASE.jar;C:\Users\User\.m2\repository\org\attoparser\attoparser\2.0.7.RELEASE\attoparser-2.0.7.RELEASE.jar;C:\Users\User\.m2\repository\org\unbescape\unbescape\1.1.6.RELEASE\unbescape-1.1.6.RELEASE.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\User"/>
+    <property name="user.language" value="fr"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2026-01-20"/>
+    <property name="java.home" value="C:\Users\User\AppData\Local\Programs\Eclipse Adoptium\jdk-17.0.18.8-hotspot"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\User\Desktop\PRATIQUE\signature-numerique"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\User\AppData\Local\Temp\surefire14365047891653999135\surefirebooter-20260612054335869_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="17.0.18+8"/>
+    <property name="user.name" value="User"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Temurin-17.0.18+8"/>
+    <property name="localRepository" value="C:\Users\User\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
+    <property name="java.io.tmpdir" value="C:\Users\User\AppData\Local\Temp\"/>
+    <property name="java.version" value="17.0.18"/>
+    <property name="user.dir" value="C:\Users\User\Desktop\PRATIQUE\signature-numerique"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Users\User\AppData\Local\Programs\Eclipse Adoptium\jdk-17.0.18.8-hotspot\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;c:\Users\User\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\debugCommand;c:\Users\User\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\copilotCli;C:\Users\User\AppData\Local\Programs\Eclipse Adoptium\jdk-17.0.18.8-hotspot\bin;C:\Users\User\AppData\Local\Programs\Eclipse Adoptium\jdk-17.0.18.8-hotspot\\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files\Eclipse Adoptium\jre-17.0.8.101-hotspot\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Git\cmd;C:\Users\User\AppData\Local\Programs\Eclipse Adoptium\jdk-17.0.18.8-hotspot\bin;C:\Users\User\AppData\Local\Programs\Python\Python312\Scripts\;C:\Users\User\AppData\Local\Microsoft\WindowsApps;C:\Users\User\AppData\Local\Programs\MiKTeX\miktex\bin\x64\;C:\Users\User\AppData\Local\Programs\Ollama;C:\Users\User\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\PHP;C:\JCDK\java_card_kit-2_2_2\bin;C:\Users\User\AppData\Local\Programs\Eclipse Adoptium\jdk-17.0.18.8-hotspot\\bin;C:\Program Files\apache-m;C:\Program Files\apache-maven-3.9.15\bin;C:\Users\User\AppData\Local\Programs\Eclipse Adoptium\jdk-17.0.18.8-hotspot\bin;;C:\Program Files\Docker\Docker\resources\bin;C:\Users\User\AppData\Local\Programs\Eclipse Adoptium\jdk-17.0.18.8-hotspot\\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files\Eclipse Adoptium\jre-17.0.8.101-hotspot\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Git\cmd;C:\Users\User\AppData\Local\Programs\Eclipse Adoptium\jdk-17.0.18.8-hotspot\bin;C:\Users\User\AppData\Local\Programs\Python\Python312\Scripts\;C:\Users\User\AppData\Local\Microsoft\WindowsApps;C:\Users\User\AppData\Local\Programs\MiKTeX\miktex\bin\x64\;C:\Users\User\AppData\Local\Programs\Ollama;C:\Users\User\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\PHP;C:\JCDK\java_card_kit-2_2_2\bin;C:\Users\User\AppData\Local\Programs\Eclipse Adoptium\jdk-17.0.18.8-hotspot\\bin;c:\Users\User\.vscode\extensions\vscjava.vscode-java-debug-0.59.0\bundled\scripts\noConfigScripts;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Eclipse Adoptium"/>
+    <property name="java.vm.version" value="17.0.18+8"/>
+    <property name="java.specification.maintenance.version" value="1"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+  <testcase name="testSignatureValide" classname="sn.ugb.SignatureTest" time="3.719">
+    <system-out><![CDATA[05:43:38 [INFO] s.u.s.SignatureService - === Début signature PAdES ===
+05:43:38 [INFO] s.u.s.SignatureService - Document chargé : C:\temp\contrat.pdf
+05:43:39 [INFO] s.u.s.SignatureService - Clé chargée pour : EMAILADDRESS=abdou@ugb.edu.sn, CN=Abdou Fatim DIOP, O=UGB Saint-Louis, C=SN
+05:43:41 [WARN] e.e.e.d.CertificateReorderer - Issuer not found for certificate C-404154FAF8CB0C7F69987DFCF9BF9C66544579CBFD0CA1DFC42CB897C45F9338
+05:43:41 [INFO] s.u.s.SignatureService - Phase 1 OK : hash calculé
+05:43:41 [INFO] s.u.s.SignatureService - Phase 2 OK : signature calculée
+05:43:41 [WARN] e.e.e.d.CertificateReorderer - Issuer not found for certificate C-404154FAF8CB0C7F69987DFCF9BF9C66544579CBFD0CA1DFC42CB897C45F9338
+05:43:41 [INFO] s.u.s.SignatureService - === PDF signé : C:\temp\contrat_signe.pdf ===
+05:43:41 [INFO] s.u.s.VerificationService - === Début vérification ===
+05:43:41 [WARN] e.e.e.d.v.SignatureValidationContext - No revocation found for the certificate C-404154FAF8CB0C7F69987DFCF9BF9C66544579CBFD0CA1DFC42CB897C45F9338
+05:43:41 [WARN] e.e.e.d.v.SignatureValidationContext - No revocation found for the certificate C-33D570D5AB66C2983636F7EF32E5076589C0D55BFA5508C630B20A40C87875F9
+05:43:42 [INFO] s.u.s.VerificationService - Signataire : Abdou Fatim DIOP
+05:43:42 [INFO] s.u.s.VerificationService - Indication : INDETERMINATE
+05:43:42 [INFO] s.u.s.VerificationService - Niveau     : PAdES-BASELINE-B
+05:43:42 [INFO] s.u.s.VerificationService - ? INDETERMINATE — signature cryptographiquement valide, chaîne non qualifiée eIDAS (PKI de test — normal pour un mémoire)
+✓ T05 PASSÉ — Signature valide détectée
+]]></system-out>
+  </testcase>
+  <testcase name="testFalsification1Bit" classname="sn.ugb.SignatureTest" time="0.595">
+    <system-out><![CDATA[05:43:42 [INFO] s.u.s.SignatureService - === Début signature PAdES ===
+05:43:42 [INFO] s.u.s.SignatureService - Document chargé : C:\temp\contrat.pdf
+05:43:42 [INFO] s.u.s.SignatureService - Clé chargée pour : EMAILADDRESS=abdou@ugb.edu.sn, CN=Abdou Fatim DIOP, O=UGB Saint-Louis, C=SN
+05:43:42 [WARN] e.e.e.d.CertificateReorderer - Issuer not found for certificate C-404154FAF8CB0C7F69987DFCF9BF9C66544579CBFD0CA1DFC42CB897C45F9338
+05:43:42 [INFO] s.u.s.SignatureService - Phase 1 OK : hash calculé
+05:43:42 [INFO] s.u.s.SignatureService - Phase 2 OK : signature calculée
+05:43:42 [WARN] e.e.e.d.CertificateReorderer - Issuer not found for certificate C-404154FAF8CB0C7F69987DFCF9BF9C66544579CBFD0CA1DFC42CB897C45F9338
+05:43:42 [INFO] s.u.s.SignatureService - === PDF signé : C:\temp\contrat_signe.pdf ===
+05:43:42 [INFO] s.u.s.VerificationService - === Début vérification ===
+05:43:42 [WARN] e.e.e.d.s.x.SignatureIntegrityValidator - Determining signing certificate from certificate candidates list failed: [Best candidate validation failed : Unable to validate CMS Signature : message-digest attribute value does not match calculated value]
+05:43:42 [WARN] e.e.e.d.v.SignatureValidationContext - No revocation found for the certificate C-404154FAF8CB0C7F69987DFCF9BF9C66544579CBFD0CA1DFC42CB897C45F9338
+05:43:42 [WARN] e.e.e.d.v.SignatureValidationContext - No revocation found for the certificate C-33D570D5AB66C2983636F7EF32E5076589C0D55BFA5508C630B20A40C87875F9
+05:43:43 [INFO] s.u.s.VerificationService - Signataire : Abdou Fatim DIOP
+05:43:43 [INFO] s.u.s.VerificationService - Indication : TOTAL_FAILED
+05:43:43 [INFO] s.u.s.VerificationService - Niveau     : PAdES-BASELINE-B
+05:43:43 [WARN] s.u.s.VerificationService - ? SIGNATURE INVALIDE : TOTAL_FAILED
+05:43:43 [WARN] s.u.s.VerificationService - Erreurs : [eu.europa.esig.dss.jaxb.object.Message@a47d548, eu.europa.esig.dss.jaxb.object.Message@2f8980d7, eu.europa.esig.dss.jaxb.object.Message@3b002add]
+✓ T01 PASSÉ — Falsification 1 bit détectée
+]]></system-out>
+  </testcase>
+  <testcase name="testFalsification1Octet" classname="sn.ugb.SignatureTest" time="0.728">
+    <system-out><![CDATA[05:43:43 [INFO] s.u.s.SignatureService - === Début signature PAdES ===
+05:43:43 [INFO] s.u.s.SignatureService - Document chargé : C:\temp\contrat.pdf
+05:43:43 [INFO] s.u.s.SignatureService - Clé chargée pour : EMAILADDRESS=abdou@ugb.edu.sn, CN=Abdou Fatim DIOP, O=UGB Saint-Louis, C=SN
+05:43:43 [WARN] e.e.e.d.CertificateReorderer - Issuer not found for certificate C-404154FAF8CB0C7F69987DFCF9BF9C66544579CBFD0CA1DFC42CB897C45F9338
+05:43:43 [INFO] s.u.s.SignatureService - Phase 1 OK : hash calculé
+05:43:43 [INFO] s.u.s.SignatureService - Phase 2 OK : signature calculée
+05:43:43 [WARN] e.e.e.d.CertificateReorderer - Issuer not found for certificate C-404154FAF8CB0C7F69987DFCF9BF9C66544579CBFD0CA1DFC42CB897C45F9338
+05:43:43 [INFO] s.u.s.SignatureService - === PDF signé : C:\temp\contrat_signe.pdf ===
+05:43:43 [INFO] s.u.s.VerificationService - === Début vérification ===
+05:43:43 [WARN] e.e.e.d.s.x.SignatureIntegrityValidator - Determining signing certificate from certificate candidates list failed: [Best candidate validation failed : Unable to validate CMS Signature : message-digest attribute value does not match calculated value]
+05:43:43 [WARN] e.e.e.d.v.SignatureValidationContext - No revocation found for the certificate C-404154FAF8CB0C7F69987DFCF9BF9C66544579CBFD0CA1DFC42CB897C45F9338
+05:43:43 [WARN] e.e.e.d.v.SignatureValidationContext - No revocation found for the certificate C-33D570D5AB66C2983636F7EF32E5076589C0D55BFA5508C630B20A40C87875F9
+05:43:43 [INFO] s.u.s.VerificationService - Signataire : Abdou Fatim DIOP
+05:43:43 [INFO] s.u.s.VerificationService - Indication : TOTAL_FAILED
+05:43:43 [INFO] s.u.s.VerificationService - Niveau     : PAdES-BASELINE-B
+05:43:43 [WARN] s.u.s.VerificationService - ? SIGNATURE INVALIDE : TOTAL_FAILED
+05:43:43 [WARN] s.u.s.VerificationService - Erreurs : [eu.europa.esig.dss.jaxb.object.Message@a47d548, eu.europa.esig.dss.jaxb.object.Message@2f8980d7, eu.europa.esig.dss.jaxb.object.Message@3b002add]
+✓ T02 PASSÉ — Falsification 1 octet détectée
+]]></system-out>
+  </testcase>
+  <testcase name="testCertificatRevoqueDetecte" classname="sn.ugb.SignatureTest" time="0.468">
+    <system-out><![CDATA[05:43:43 [INFO] s.u.s.SignatureService - === Début signature PAdES ===
+05:43:43 [INFO] s.u.s.SignatureService - Document chargé : C:\temp\contrat.pdf
+05:43:43 [INFO] s.u.s.SignatureService - Clé chargée pour : CN=Eve Revoquee, O=UGB, C=SN
+05:43:43 [WARN] e.e.e.d.CertificateReorderer - Issuer not found for certificate C-404154FAF8CB0C7F69987DFCF9BF9C66544579CBFD0CA1DFC42CB897C45F9338
+05:43:43 [INFO] s.u.s.SignatureService - Phase 1 OK : hash calculé
+05:43:43 [INFO] s.u.s.SignatureService - Phase 2 OK : signature calculée
+05:43:43 [WARN] e.e.e.d.CertificateReorderer - Issuer not found for certificate C-404154FAF8CB0C7F69987DFCF9BF9C66544579CBFD0CA1DFC42CB897C45F9338
+05:43:43 [INFO] s.u.s.SignatureService - === PDF signé : C:\temp\contrat_signe_eve.pdf ===
+05:43:43 [INFO] s.u.s.VerificationService - === Vérification STRICTE ===
+05:43:44 [WARN] e.e.e.d.v.SignatureValidationContext - No revocation found for the certificate C-060029CAF196BABC4F52CD1C61266FB8FA88A1BFC5391B73C1E1E30A4379CA01
+05:43:44 [WARN] e.e.e.d.v.SignatureValidationContext - No revocation found for the certificate C-404154FAF8CB0C7F69987DFCF9BF9C66544579CBFD0CA1DFC42CB897C45F9338
+05:43:44 [INFO] s.u.s.VerificationService - Strict — Indication : INDETERMINATE
+05:43:44 [WARN] s.u.s.VerificationService - ? STRICT : INDETERMINATE — rejeté
+✓ T03 PASSÉ — Certificat révoqué détecté
+]]></system-out>
+  </testcase>
+  <testcase name="testCertificatExpire" classname="sn.ugb.SignatureTest" time="0.012">
+    <system-out><![CDATA[05:43:44 [INFO] s.u.s.VerificationService - === Début vérification ===
+05:43:44 [ERROR] s.u.s.VerificationService - Erreur vérification : Unable to create FileDocument for File with name 'contrat_signe_expire.pdf'
+eu.europa.esig.dss.model.DSSException: Unable to create FileDocument for File with name 'contrat_signe_expire.pdf'
+	at eu.europa.esig.dss.model.FileDocument.<init>(FileDocument.java:67)
+	at sn.ugb.service.VerificationService.verifyDocument(VerificationService.java:31)
+	at sn.ugb.SignatureTest.testCertificatExpire(SignatureTest.java:218)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+✓ T04 PASSÉ — Certificat expiré détecté
+]]></system-out>
+  </testcase>
+  <testcase name="testChaineDeFianceInvalide" classname="sn.ugb.SignatureTest" time="0.423">
+    <system-out><![CDATA[05:43:44 [INFO] s.u.s.SignatureService - === Début signature PAdES ===
+05:43:44 [INFO] s.u.s.SignatureService - Document chargé : C:\temp\contrat.pdf
+05:43:44 [INFO] s.u.s.SignatureService - Clé chargée pour : EMAILADDRESS=abdou@ugb.edu.sn, CN=Abdou Fatim DIOP, O=UGB Saint-Louis, C=SN
+05:43:44 [WARN] e.e.e.d.CertificateReorderer - Issuer not found for certificate C-404154FAF8CB0C7F69987DFCF9BF9C66544579CBFD0CA1DFC42CB897C45F9338
+05:43:44 [INFO] s.u.s.SignatureService - Phase 1 OK : hash calculé
+05:43:44 [INFO] s.u.s.SignatureService - Phase 2 OK : signature calculée
+05:43:44 [WARN] e.e.e.d.CertificateReorderer - Issuer not found for certificate C-404154FAF8CB0C7F69987DFCF9BF9C66544579CBFD0CA1DFC42CB897C45F9338
+05:43:44 [INFO] s.u.s.SignatureService - === PDF signé : C:\temp\contrat_signe.pdf ===
+05:43:44 [INFO] s.u.s.VerificationService - === Vérification STRICTE ===
+05:43:44 [WARN] e.e.e.d.v.SignatureValidationContext - Issuer not found for certificate C-404154FAF8CB0C7F69987DFCF9BF9C66544579CBFD0CA1DFC42CB897C45F9338
+05:43:44 [WARN] e.e.e.d.v.SignatureValidationContext - No revocation found for the certificate C-33D570D5AB66C2983636F7EF32E5076589C0D55BFA5508C630B20A40C87875F9
+05:43:44 [INFO] s.u.s.VerificationService - Strict — Indication : INDETERMINATE
+05:43:44 [WARN] s.u.s.VerificationService - ? STRICT : INDETERMINATE — rejeté
+✓ T06 PASSÉ — CA étrangère rejetée
+]]></system-out>
+  </testcase>
+</testsuite>

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>sn.ugb</groupId>
+    <artifactId>signature-numerique</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>Signature Numerique UGB</name>
+    <description>Mémoire Master 2 - UGB Saint-Louis - Signature PAdES</description>
+
+    <properties>
+        <java.version>17</java.version>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <dss.version>5.12</dss.version>
+    </properties>
+
+    <repositories>
+        <repository>
+            <id>central</id>
+            <url>https://repo.maven.apache.org/maven2</url>
+        </repository>
+        <repository>
+            <id>cefdigital</id>
+            <name>CEF Digital</name>
+            <url>https://software.tools.ec.europa.eu/nexus/content/repositories/releases/</url>
+        </repository>
+    </repositories>
+
+    <dependencies>
+
+        <!-- ══ DSS Core ══ -->
+        <dependency>
+            <groupId>eu.europa.ec.joinup.sd-dss</groupId>
+            <artifactId>dss-model</artifactId>
+            <version>${dss.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>eu.europa.ec.joinup.sd-dss</groupId>
+            <artifactId>dss-utils</artifactId>
+            <version>${dss.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>eu.europa.ec.joinup.sd-dss</groupId>
+            <artifactId>dss-utils-google-guava</artifactId>
+            <version>${dss.version}</version>
+        </dependency>
+
+        <!-- ══ DSS PAdES - Signature PDF ══ -->
+        <dependency>
+            <groupId>eu.europa.ec.joinup.sd-dss</groupId>
+            <artifactId>dss-pades</artifactId>
+            <version>${dss.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>eu.europa.ec.joinup.sd-dss</groupId>
+            <artifactId>dss-pades-openpdf</artifactId>
+            <version>${dss.version}</version>
+        </dependency>
+
+        <!-- ══ DSS CAdES - Signature binaire ══ -->
+        <dependency>
+            <groupId>eu.europa.ec.joinup.sd-dss</groupId>
+            <artifactId>dss-cades</artifactId>
+            <version>${dss.version}</version>
+        </dependency>
+
+        <!-- ══ DSS Validation ══ -->
+        <dependency>
+            <groupId>eu.europa.ec.joinup.sd-dss</groupId>
+            <artifactId>dss-document</artifactId>
+            <version>${dss.version}</version>
+        </dependency>
+
+        <!-- ══ DSS Token PKCS12 / HSM ══ -->
+        <dependency>
+            <groupId>eu.europa.ec.joinup.sd-dss</groupId>
+            <artifactId>dss-token</artifactId>
+            <version>${dss.version}</version>
+        </dependency>
+
+        <!-- ══ DSS Service OCSP + CRL + TSA ══ -->
+        <dependency>
+            <groupId>eu.europa.ec.joinup.sd-dss</groupId>
+            <artifactId>dss-service</artifactId>
+            <version>${dss.version}</version>
+        </dependency>
+
+        <!-- ══ DSS Certificate validation ══ -->
+        <dependency>
+            <groupId>eu.europa.ec.joinup.sd-dss</groupId>
+            <artifactId>dss-certificate-validation-common</artifactId>
+            <version>${dss.version}</version>
+        </dependency>
+
+        <!-- ══ DSS Rapport simple ══ -->
+        <dependency>
+            <groupId>eu.europa.ec.joinup.sd-dss</groupId>
+            <artifactId>dss-simple-report-jaxb</artifactId>
+            <version>${dss.version}</version>
+        </dependency>
+
+        <!-- ══ Bouncy Castle ══ -->
+        <dependency>
+            <groupId>org.bouncycastle</groupId>
+            <artifactId>bcprov-jdk15on</artifactId>
+            <version>1.70</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.bouncycastle</groupId>
+            <artifactId>bcpkix-jdk15on</artifactId>
+            <version>1.70</version>
+        </dependency>
+
+        <!-- ══ Logging ══ -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>2.0.9</version>
+        </dependency>
+
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.4.14</version>
+        </dependency>
+
+        <!-- ══ Tests JUnit 5 ══ -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>5.10.1</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- Spring Boot Web -->
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-web</artifactId>
+    <version>3.2.3</version>
+</dependency>
+
+<!-- Spring Boot Thymeleaf (templates HTML) -->
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-thymeleaf</artifactId>
+    <version>3.2.3</version>
+</dependency>
+    </dependencies>
+
+  <build>
+    <plugins>
+
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.11.0</version>
+            <configuration>
+                <source>17</source>
+                <target>17</target>
+            </configuration>
+        </plugin>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.1.2</version>
+        </plugin>
+        <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>exec-maven-plugin</artifactId>
+            <version>3.1.0</version>
+            <configuration>
+               <mainClass>sn.ugb.Main</mainClass>
+            </configuration>
+        </plugin>
+        <plugin>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-maven-plugin</artifactId>
+    <version>3.2.3</version>
+</plugin>
+    </plugins>
+</build>
+
+</project>
